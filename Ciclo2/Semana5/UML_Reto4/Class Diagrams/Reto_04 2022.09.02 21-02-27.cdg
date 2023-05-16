@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reto_04">
+  <ClassDiagramComponents>
+    <Class name="ListaMayorista" package="clases" visibility="public" xPosition="50.0" yPosition="465.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularPrecioVenta" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaMinorista" package="clases" visibility="public" xPosition="347.0" yPosition="465.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularPrecioVenta" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaMostrador" package="clases" visibility="public" xPosition="599.0" yPosition="465.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularPrecioVenta" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="clases" visibility="public" isAbstract="true" xPosition="137.0" yPosition="4.0">
+      <Fields>
+        <Field name="costo" type="double" visibility="protected"/>
+        <Field name="gananciaMostrador" type="double" visibility="protected"/>
+        <Field name="gananciaMinorista" type="double" visibility="protected"/>
+        <Field name="gananciaMayorista" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="costo"/>
+          <Argument type="double" name="gananciaMostrador"/>
+          <Argument type="double" name="gananciaMinorista"/>
+          <Argument type="double" name="gananciaMayorista"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCosto" returnType="double" visibility="public"/>
+        <Method name="setCosto" returnType="void" visibility="public">
+          <Argument type="double" name="costo"/>
+        </Method>
+        <Method name="getGananciaMostrador" returnType="double" visibility="public"/>
+        <Method name="setGananciaMostrador" returnType="void" visibility="public">
+          <Argument type="double" name="gananciaMostrador"/>
+        </Method>
+        <Method name="getGananciaMinorista" returnType="double" visibility="public"/>
+        <Method name="setGananciaMinorista" returnType="void" visibility="public">
+          <Argument type="double" name="gananciaMinorista"/>
+        </Method>
+        <Method name="getGananciaMayorista" returnType="double" visibility="public"/>
+        <Method name="setGananciaMayorista" returnType="void" visibility="public">
+          <Argument type="double" name="gananciaMayorista"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="formularios" visibility="public" xPosition="948.0" yPosition="4.0">
+      <Fields>
+        <Field name="lblCosto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblListaMayorista" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblListaMinorista" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblPrecioMayorista" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblPrecioMostrador" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblPrecioMostrar" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblPreciosVenta" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblVistaMostrador" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="panelBotones" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelCabecera" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelCuerpo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtCajaCosto" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtCajaListaMayorista" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtCajaListaMostrador" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtCajaMinorista" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtCajaPrecioMayorista" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCajaPrecioMinorista" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCajaPrecioMostrador" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCalcular" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtCajaPrecioMinoristaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtCalcularActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="precios" package="interfaces" visibility="public" xPosition="347.0" yPosition="820.0">
+      <Methods>
+        <Method name="calcularPrecioVenta" returnType="double" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="clases.ListaMayorista" target="clases.Producto"/>
+    <IsRelation name="is" source="clases.ListaMostrador" target="clases.Producto"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="clases.ListaMinorista" target="interfaces.precios"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="clases.ListaMayorista" target="interfaces.precios"/>
+    <IsRelation name="is" source="clases.ListaMinorista" target="clases.Producto"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="clases.ListaMostrador" target="interfaces.precios"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

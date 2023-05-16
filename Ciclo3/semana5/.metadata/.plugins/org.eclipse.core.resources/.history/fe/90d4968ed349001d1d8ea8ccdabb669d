@@ -1,0 +1,9 @@
+package com.misiontic.repositorios;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.misiontic.entidades.Categoria;
+
+public interface CategoriaRepositorio extends JpaRepository<Categoria, Long> {
+
+}

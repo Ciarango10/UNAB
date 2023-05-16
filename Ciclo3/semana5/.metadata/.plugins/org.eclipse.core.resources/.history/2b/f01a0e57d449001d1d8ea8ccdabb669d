@@ -1,0 +1,6 @@
+package com.misiontic.interfaces;
+
+public interface Operaciones<T> {
+	
+	public abstract boolean agregar(T objeto);
+}

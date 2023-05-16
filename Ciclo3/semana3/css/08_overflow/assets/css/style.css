@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+div.contenedor {
+    border: 3px solid firebrick;
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    overflow: auto;
+    text-align: justify;
+    padding: 25px;
+}

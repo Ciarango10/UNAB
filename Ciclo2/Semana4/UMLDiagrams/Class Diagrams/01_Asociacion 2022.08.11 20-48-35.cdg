@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="01_Asociacion">
+  <ClassDiagramComponents>
+    <Class name="Categoria" package="clases" visibility="public" xPosition="403.0" yPosition="166.0">
+      <Fields>
+        <Field name="codCategoria" type="int" visibility="private"/>
+        <Field name="nombreCategoria" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCodCategoria" returnType="int" visibility="public"/>
+        <Method name="setCodCategoria" returnType="void" visibility="public">
+          <Argument type="int" name="codCategoria"/>
+        </Method>
+        <Method name="getNombreCategoria" returnType="String" visibility="public"/>
+        <Method name="setNombreCategoria" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCategoria"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="clases" visibility="public" xPosition="413.0" yPosition="459.0">
+      <Fields>
+        <Field name="codProducto" type="int" visibility="private"/>
+        <Field name="nombreProducto" type="String" visibility="private"/>
+        <Field name="precioProducto" type="double" visibility="private"/>
+        <Field name="cantidadProducto" type="int" visibility="private"/>
+        <Field name="miCategoria" type="Categoria" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCodProducto" returnType="int" visibility="public"/>
+        <Method name="setCodProducto" returnType="void" visibility="public">
+          <Argument type="int" name="codProducto"/>
+        </Method>
+        <Method name="getNombreProducto" returnType="String" visibility="public"/>
+        <Method name="setNombreProducto" returnType="void" visibility="public">
+          <Argument type="String" name="nombreProducto"/>
+        </Method>
+        <Method name="getPrecioProducto" returnType="double" visibility="public"/>
+        <Method name="setPrecioProducto" returnType="void" visibility="public">
+          <Argument type="double" name="precioProducto"/>
+        </Method>
+        <Method name="getCantidadProducto" returnType="int" visibility="public"/>
+        <Method name="setCantidadProducto" returnType="void" visibility="public">
+          <Argument type="int" name="cantidadProducto"/>
+        </Method>
+        <Method name="getMiCategoria" returnType="Categoria" visibility="public"/>
+        <Method name="setMiCategoria" returnType="void" visibility="public">
+          <Argument type="Categoria" name="miCategoria"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="codigo" visibility="public" xPosition="451.0" yPosition="24.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="miCategoria" source="clases.Producto" target="clases.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="clases.Producto" target="clases.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

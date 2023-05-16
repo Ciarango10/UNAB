@@ -1,0 +1,147 @@
+//reiniciar servidor
+sudo init 6
+
+//actualizar sistema
+sudo yum -y update
+
+
+//verificar si existen repositorios rpm de mysql
+sudo yum list all | grep mysql
+
+
+//Instalar Mysql
+sudo yum -y install mysql-server
+
+
+//iniciamos el servicio de mysql
+sudo systemctl start mysqld
+
+
+//habilitamos el servicio de mysql para que arranque en el inicio del sistema
+sudo systemctl enable mysqld
+
+
+//configurar parametros de mysql
+sudo mysql_secure_installation
+
+//Conectarse a la base de datos MySQL
+sudo mysql -u root -p
+
+//Crear base de datos MySQL
+create database bd_papeleria;
+
+//Salir de MySQL
+\q
+
+//reiniciar el servicio de mysql
+sudo systemctl restart mysqld
+
+
+//Instalacion de Java
+sudo yum -y install java-1.8.0-openjdk
+
+//verificar instalación de Java
+sudo java -version
+
+
+//configurar variables de entorno java home
+sudo tee /etc/profile.d/jdk.sh <<EOF
+export JAVA_HOME=/usr/java/default
+export PATH=\$PATH:\$JAVA_HOME/bin
+EOF
+
+
+//creamos el archivo para el repositorio
+sudo nano /etc/yum.repos.d/nginx.repo
+
+//agregamos estos valores al archivo creado
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/mainline/rhel/7/$basearch/
+gpgcheck=0
+enabled=1
+
+//Salir del editor nano
+F2 
+//Guardando
+F2 + Y + Enter
+
+//instalamos el servidor nginx
+sudo yum -y install nginx
+
+//iniciamos el servicio
+sudo systemctl start nginx
+
+//habilitamos el servicio
+sudo systemctl enable nginx
+
+
+//agregamos el puerto del servicio al firewall
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --reload
+
+
+
+
+// Buscar paquetes filtrando palabra clave.
+sudo yum list all | grep java
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'misionTic2022';
+flush privileges;
+
+
+//comando para ejecutar un .jar
+java -jar nombreapp.jar
+
+
+//crear enlace simbolico para el servicio
+sudo ln -s /home/opc/usuarios-api-1.0.0.jar /etc/init.d/servicio-api
+
+//dar permisos al enlace simbolico
+sudo chmod 775 servicio-api -R
+
+//abrir puerto 8080 para aplicacion en spring boot
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+
+
+//iniciar el servicio de backendo
+sudo services servidor-api start
+
+//muestre el servicio que esta corriendo en el puerto 8080
+sudo lsoft -i:8080
+
+
+//***************************************************
+//crear un servicio para ejecutar el jar
+//***************************************************
+ 
+//comando para ejecutar un .jar
+java -jar nombreapp.jar
+ 
+//crear enlace simbolico para el servicio
+sudo ln -s /home/opc/usuarios-api-1.0.0.jar /etc/init.d/servicio-api
+ 
+//dar permisos al enlace simbolico
+sudo chmod 775 servicio-api -R
+ 
+//iniciar el servicio
+sudo service servicio-api start
+ 
+//abrir puerto 8080 para aplicacion en spring boot
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+ 
+//configurar en el arranque automatico de linux
+sudo chkconfig servicio-api on
+ 
+//verificar si esta ocupado el puerto 8080
+sudo lsof -i:8080
+ 
+//matar servicio en el puerto 8080
+sudo kill $(lsof -t -i:8080)
+
+
+

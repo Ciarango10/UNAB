@@ -1,0 +1,43 @@
+package com.misiontic.servicios;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.misiontic.entidades.Categoria;
+import com.misiontic.interfaces.Operaciones;
+
+@Service
+public class CategoriaServicio implements Operaciones<Categoria> {
+
+	@Override
+	public boolean agregar(Categoria objeto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Categoria> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean eliminar(Long id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean actualizar(Categoria objeto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Categoria obtenerUno(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

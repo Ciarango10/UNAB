@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="03_Poo">
+  <ClassDiagramComponents>
+    <Class name="Administrador" package="clases" visibility="public" xPosition="52.0" yPosition="739.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AuxiliarContable" package="clases" visibility="public" xPosition="400.0" yPosition="739.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Contador" package="clases" visibility="public" xPosition="749.0" yPosition="739.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Perfil" package="clases" visibility="public" xPosition="384.0" yPosition="219.0">
+      <Fields>
+        <Field name="codPerfil" type="int" visibility="protected"/>
+        <Field name="nombrePerfil" type="String" visibility="protected"/>
+        <Field name="arregloPermisos" type="List&lt;String&gt;" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodPerfil" returnType="int" visibility="public"/>
+        <Method name="setCodPerfil" returnType="void" visibility="public">
+          <Argument type="int" name="codPerfil"/>
+        </Method>
+        <Method name="getNombrePerfil" returnType="String" visibility="public"/>
+        <Method name="setNombrePerfil" returnType="void" visibility="public">
+          <Argument type="String" name="nombrePerfil"/>
+        </Method>
+        <Method name="getArregloPermisos" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="setArregloPermisos" returnType="void" visibility="public">
+          <Argument type="List&lt;String&gt;" name="arregloPermisos"/>
+        </Method>
+        <Method name="agregarPermiso" returnType="void" visibility="public">
+          <Argument type="String" name="nuevoPermiso"/>
+        </Method>
+        <Method name="eliminarPermiso" returnType="void" visibility="public">
+          <Argument type="String" name="nombrePermiso"/>
+        </Method>
+        <Method name="imprimirPermisos" returnType="void" visibility="public"/>
+        <Method name="buscarPosicion" returnType="Integer" visibility="public">
+          <Argument type="String" name="nombrePermiso"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="codigo" visibility="public" xPosition="441.0" yPosition="87.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="OperacionesPerfil" package="interfaces" visibility="public" xPosition="806.0" yPosition="87.0">
+      <Methods>
+        <Method name="agregarPermiso" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="String" name="nuevoPermiso"/>
+        </Method>
+        <Method name="eliminarPermiso" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="String" name="nombrePermiso"/>
+        </Method>
+        <Method name="imprimirPermisos" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="buscarPosicion" returnType="Integer" visibility="public" isAbstract="true">
+          <Argument type="String" name="nombrePermiso"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="clases.Perfil" target="interfaces.OperacionesPerfil"/>
+    <IsRelation name="is" source="clases.Administrador" target="clases.Perfil"/>
+    <IsRelation name="is" source="clases.Contador" target="clases.Perfil"/>
+    <IsRelation name="is" source="clases.AuxiliarContable" target="clases.Perfil"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="aplicacion">
+        {{2*5}}
+        <p>{{saludo}}</p>
+        <p>DIRECTIVA V-MODEL</p>
+        <label>Nombre</label>
+        <input type="text" v-model="nombre"/>
+        <label>Edad</label>
+        <input type="number" v-model="edad"/>
+        <p>DIRECTIVA V-IF</p>
+        <p v-if="edad>=50">{{nombre}} Su edad es {{edad}} y es adulto mayor🧐</p>
+        <p v-else-if="edad>=18">{{nombre}} Su edad es {{edad}} y es mayor de edad😀</p>
+        <p v-else-if="edad>=10">{{nombre}} Su edad es {{edad}} y es un adolescente😎</p>
+        <p v-else>{{nombre}} su edad es: {{edad}} y es menor de edad🤨</p>
+        <p>DIRECTIVA V-FOR</p>
+    
+        <table border="1">
+            <thead>
+                <th>Navegadores</th>
+            </thead>
+            <tbody>
+                <tr v-for="fila in navegadores">
+                    <td>{{fila}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>LISTA DE USUARIOS</p>
+        <table border="1">
+            <thead>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+            </thead>
+            <tbody>
+                <tr v-for="usuario in usuarios">
+                    <td>{{usuario.id}}</td>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.apellido}}</td>
+                    <td>{{usuario.correo}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>DIRECTIVA V-ON</p>
+        <input type="button" value="INCREMENTAR" v-on:click="incrementar"/>
+        <input type="button" value="DECREMENTAR" v-on:click="decrementar"/>
+        <p>{{edad}}</p>
+        <ul>
+            <li v-for="navegador in navegadores">{{navegador}}</li>
+        </ul>
+        <input type="text" v-model="navegadorWeb" v-on:keyup.enter="agregarNavegador">
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/app.js"></script>
+</html>

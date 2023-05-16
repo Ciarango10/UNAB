@@ -1,0 +1,8 @@
+package com.misiontic.apipapeleria.servicios;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ProductoServicio {
+
+}

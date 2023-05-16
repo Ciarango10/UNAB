@@ -1,0 +1,34 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+.rojo {
+    background-color: lightsalmon;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    margin-bottom: 100px;
+    border: 10px dashed dodgerblue;
+}
+
+.rosa {
+    background-color: hotpink;
+    padding: 15px 10px 5px 2px;
+    border: 15px double greenyellow;
+}
+
+.amarillo {
+    background-color: gold;
+    border: 20px solid slategray;
+}
+
+.azul {
+    background-color: dodgerblue;
+    border-style: dotted solid dashed double;
+}

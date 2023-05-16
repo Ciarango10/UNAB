@@ -1,0 +1,18 @@
+{   "contactos": 
+    [
+        {"nombre": "manuel", "cargo": "desarrollador web", "email": "manuel@gmail.com", "sueldo": 1000}, 
+        {"nombre": "lorena", "cargo": "desarrollador movil", "email": "lorena@gmail.com", "sueldo": 500}, 
+        {"nombre": "javier", "cargo": "dba base de datos", "email": "javier@gmail.com", "sueldo": 600}, 
+        {"nombre": "ana", "cargo": "desarrollador backend", "email": "ana@gmail.com", "sueldo": 800}, 
+        {"nombre": "carlos andres", "cargo": "desarrollador senior", "email": "andres@gmail.com", "sueldo": 2000}
+    ], 
+    
+    "usuarios": 
+    [
+        {"nombre": "manuel", "cargo": "desarrollador web", "email": "manuel@gmail.com", "sueldo": 1000}, 
+        {"nombre": "lorena", "cargo": "desarrollador movil", "email": "lorena@gmail.com", "sueldo": 500}, 
+        {"nombre": "javier", "cargo": "dba base de datos", "email": "javier@gmail.com", "sueldo": 600}, 
+        {"nombre": "ana", "cargo": "desarrollador backend", "email": "ana@gmail.com", "sueldo": 800}, 
+        {"nombre": "carlos andres", "cargo": "desarrollador senior", "email": "andres@gmail.com", "sueldo": 2000}
+    ]
+}

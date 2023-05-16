@@ -1,0 +1,14 @@
+package com.misiontic.apipapeleria.repositorios;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.misiontic.apipapeleria.entidades.Producto;
+
+@Repository
+public interface ProductoRepositorio extends JpaRepository<Producto, Long> {
+	
+	@Query("SELECT p FROM Producto p WHERE p.idProducto = :id")
+	public Producto obtenerUno(Long id);
+}

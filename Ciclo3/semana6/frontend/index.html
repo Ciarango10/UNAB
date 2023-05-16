@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Principal</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body>
+  <!--INICIO MENU DE NAVEGACION-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="inventario/categorias_admin.html">Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Productos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--FIN MENU DE NAVEGACION-->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="mt-2 mb-4 text-white bg-dark rounded-3 p-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Bienvenidos</h1>
+            <p>
+              Esta aplicación esta implementando la arquitectura de software REST, utiliza un backend implementando java
+              y el framework springboot y un frontend implementando HTML, CSS y JavaScript nativo.
+            </p>
+            <button class="btn btn-outline-light" type="button">CONTÁCTENOS</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="mt-2 mb-4 text-white bg-dark rounded-3 p-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Categorias</h1>
+            <p>
+              Este módulo permite crear categorías para clasificar productos en un inventario.
+            </p>
+            <a href="inventario/categorias_admin.html">
+              <button class="btn btn-outline-light" type="button">IR AL MODULO</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="mt-2 mb-4 text-white bg-dark rounded-3 p-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Productos</h1>
+            <p>
+              Este módulo permite crear productos para un inventario.
+            </p>
+            <a href="inventario/productos_admin.html">
+              <button class="btn btn-outline-light" type="button">IR AL MODULO</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFEDAA;
+    color: darkblue;
+}
+
+span {
+    font-size: 20px;
+    color: coral;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.texto_grande {
+    font-size: 40px;
+}
+
+.color_texto {
+    color: blue;
+}
+
+.formato_titulo {
+    text-align: center;
+    font-size: 40px;
+    color: blue;
+}
+
+#titulo {
+    color: darkcyan;
+}
+
+div, small, a {
+    font-size: 30px;
+    color: #da1761;
+    text-align: center;
+    font-weight: bold;
+}
+
+p.estilos_parrafos {
+    font-size: 120px;
+    color: chocolate;
+}
+
+div p span {
+    color: chartreuse;
+}

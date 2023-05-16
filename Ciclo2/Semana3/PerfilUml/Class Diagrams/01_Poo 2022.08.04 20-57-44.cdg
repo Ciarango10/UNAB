@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="01_Poo">
+  <ClassDiagramComponents>
+    <Class name="Administrador" package="clases" visibility="public" xPosition="-9.0" yPosition="194.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AuxiliarContable" package="clases" visibility="public" xPosition="128.0" yPosition="430.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Contador" package="clases" visibility="public" xPosition="540.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Perfil" package="clases" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="codPerfil" type="int" visibility="private"/>
+        <Field name="nombrePerfil" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codPerfil"/>
+          <Argument type="String" name="nombrePerfil"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="principal" package="codigo" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="clases.Administrador" target="clases.Perfil"/>
+    <IsRelation name="is" source="clases.Contador" target="clases.Perfil"/>
+    <IsRelation name="is" source="clases.AuxiliarContable" target="clases.Perfil"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

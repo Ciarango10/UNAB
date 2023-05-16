@@ -1,0 +1,64 @@
+
+    *********************************************************
+    DATOS PERSONALES DE CARLOS PÉREZ
+    *********************************************************
+    ID: 1
+    NOMBRE: Carlos
+    APELLIDOS: Pérez
+    FECHA DE NACIMIENTO: 05 de Enero del año 1989
+    *********************************************************
+    
+    *********************************************************
+    DATOS PERSONALES DE MANUEL HEREDIA
+    *********************************************************
+    ID: 2
+    NOMBRE: Manuel
+    APELLIDOS: Heredia
+    FECHA DE NACIMIENTO: 26 de Diciembre del año 1973
+    *********************************************************
+    
+    *********************************************************
+    DATOS PERSONALES DE ROSA CAMPOS
+    *********************************************************
+    ID: 3
+    NOMBRE: Rosa
+    APELLIDOS: Campos
+    FECHA DE NACIMIENTO: 12 de Junio del año 1961
+    *********************************************************
+    
+    *********************************************************
+    DATOS PERSONALES DE DAVID GARCÍA
+    *********************************************************
+    ID: 4
+    NOMBRE: David
+    APELLIDOS: García
+    FECHA DE NACIMIENTO: 25 de Julio del año 2006
+    *********************************************************
+    
+    *********************************************************
+    DATOS PERSONALES DE JUAN GARCÍA
+    *********************************************************
+    ID: 5
+    NOMBRE: Juan
+    APELLIDOS: García
+    FECHA DE NACIMIENTO: 20 de Septiembre del año 2006
+    *********************************************************
+    
+    *********************************************************
+    DATOS PERSONALES DE ALBEIRO GARCÍA
+    *********************************************************
+    ID: 6
+    NOMBRE: Albeiro
+    APELLIDOS: García
+    FECHA DE NACIMIENTO: 25 de Agosto del año 2006
+    *********************************************************
+    
+    *********************************************************
+    DATOS PERSONALES DE ANA GARCÍA
+    *********************************************************
+    ID: 7
+    NOMBRE: Ana
+    APELLIDOS: García
+    FECHA DE NACIMIENTO: 10 de Enero del año 2006
+    *********************************************************
+    

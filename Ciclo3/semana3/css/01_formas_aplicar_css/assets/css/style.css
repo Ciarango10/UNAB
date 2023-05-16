@@ -1,0 +1,14 @@
+h1 {
+    color: blueviolet; 
+    text-align: center; 
+    font-size: 100px; 
+    font-weight: bold; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+p {
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: brown;
+}

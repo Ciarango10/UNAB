@@ -1,0 +1,5 @@
+package com.misiontic.repositorios;
+
+public interface CategoriaRepositorio {
+
+}

@@ -1,0 +1,43 @@
+package com.misiontic.apipapeleria.servicios;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.misiontic.apipapeleria.entidades.Producto;
+import com.misiontic.apipapeleria.interfaces.Operaciones;
+
+@Service
+public class ProductoServicio implements Operaciones<Producto> {
+
+	@Override
+	public boolean agregar(Producto objeto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Producto> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean eliminar(Long id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean actualizar(Producto objeto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Producto obtenerUno(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

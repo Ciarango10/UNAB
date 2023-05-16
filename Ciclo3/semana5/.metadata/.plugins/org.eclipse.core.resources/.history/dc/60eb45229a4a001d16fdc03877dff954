@@ -1,0 +1,48 @@
+package com.misiontic.apipapeleria.servicios;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.misiontic.apipapeleria.entidades.Producto;
+import com.misiontic.apipapeleria.interfaces.Operaciones;
+import com.misiontic.apipapeleria.repositorios.ProductoRepositorio;
+
+@Service
+public class ProductoServicio implements Operaciones<Producto> {
+	
+	@Autowired
+	private ProductoRepositorio proRepo;
+
+	@Override
+	public boolean agregar(Producto objeto) {
+		Producto objTemporal = proRepo.save(objeto);
+		return objTemporal != null;
+	}
+
+	@Override
+	public List<Producto> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean eliminar(Long id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean actualizar(Producto objeto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Producto obtenerUno(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

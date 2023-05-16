@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM FORMULARIOS</title>
+</head>
+<body onload="focus()">
+    <fieldset>
+        <legend>DATOS PERSONALES</legend>
+
+        <form id="formulario">
+            <label for="nombres">Nombres:</label><br/>
+            <input type="text" id="nombres" name="nombres" tabindex="1"><br/><br/>
+
+            <label for="apellidos">Apellidos:</label><br/>
+            <input type="text" id="apellidos" name="apellidos" tabindex="2"><br/><br/>
+
+            <label for="correo">Email:</label><br/>
+            <input type="email" id="correo" name="correo" tabindex="3"><br/><br/>
+
+            <button type="button" onclick="mostrarValores()">GUARDAR</button>
+            <button type="button" onclick="mostrarValores2()">GUARDAR2</button>
+        </form>
+        <br/><br/>
+        <div id="informacion">
+
+        </div>
+    </fieldset>
+    
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

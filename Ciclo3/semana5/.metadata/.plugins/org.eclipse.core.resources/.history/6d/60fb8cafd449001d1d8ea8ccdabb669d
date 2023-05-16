@@ -1,0 +1,11 @@
+package com.misiontic.servicios;
+
+import org.springframework.stereotype.Service;
+
+import com.misiontic.entidades.Categoria;
+import com.misiontic.interfaces.Operaciones;
+
+@Service
+public class CategoriaServicio implements Operaciones<Categoria> {
+
+}

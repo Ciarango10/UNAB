@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <h1>FORMULARIOS HTML</h1>
+
+    <fieldset>
+        <legend>DATOS PERSONALES</legend>
+
+        <form action="procesar_datos.html" method="GET" autocomplete="off">
+            <label for="nombres">Nombres:</label><br />
+            <input type="text" id="nombres" name="nombres" placeholder="Escribe tus nombres" tabindex="1" required/><br /><br />
+
+            <label for="apellidos">Apellidos:</label><br />
+            <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tus apellidos" tabindex="2" required/><br /><br />
+
+            <label for="correo">Email:</label><br />
+            <input type="email" id="correo" name="correo" placeholder="Escriba su email" tabindex="3" required/><br /><br />
+
+            <label for="edad">Edad:</label><br/>
+            <input type="number" id="edad" name="edad" value="0" tabindex="4" required/><br/><br/>
+
+            <label for="">Genero</label><br/>
+ 
+            <input type="radio" id="femenino" name="genero" tabindex="5" value="f"/>
+            <label for="femenino">Femenino</label>
+
+            <input type="radio" id="masculino" name="genero" tabindex="6" value="m"/>
+            <label for="masculino">Masculino</label><br/><br/>
+
+            <label for="">Musica Favorita</label><br/>
+
+            <input type="checkbox" id="clasica" name="musica" value="clasica" tabindex="7">
+            <label for="clasica">Clasica</label><br/>
+
+            <input type="checkbox" id="vallenato" name="musica" value="vallenato" tabindex="8">
+            <label for="vallenato">Vallenato</label><br/>
+
+            <input type="checkbox" id="salsa" name="musica" value="salsa" tabindex="9">
+            <label for="salsa">Salsa</label><br/><br/>
+
+            <label for="pasatiempos">Pasatiempos:</label><br/>
+            <select id="pasatiempos" name="pasatiempos" tabindex="10">
+                <option value="cantar">Cantar</option>
+                <option value="bailar">Bailar</option>
+                <option value="leer">Leer</option>
+                <option value="futbol">Jugar Futbol</option>
+                <option value="guitarra">Tocar Guitarra</option>
+            </select><br/><br/>
+
+            <label for="fechanacimiento">Fecha Nacimiento:</label><br>
+            <input type="date" id="fechanacimiento" name="fechanacimiento" tabindex="11" required><br/><br/>
+
+            <label for="">Descripcion:</label><br/>
+            <textarea id="descripcion" name="descripcion" cols="50" rows="10" tabindex="12" required></textarea>
+
+            <br/><br/>
+            <button type="submit">Guardar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </fieldset>
+</body>
+
+</html>

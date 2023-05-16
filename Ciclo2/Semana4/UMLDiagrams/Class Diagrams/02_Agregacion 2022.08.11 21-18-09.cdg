@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="02_Agregacion">
+  <ClassDiagramComponents>
+    <Class name="Pedido" package="clases" visibility="public" xPosition="518.0" yPosition="146.0">
+      <Fields>
+        <Field name="cliente" type="String" visibility="private"/>
+        <Field name="numeroPedido" type="String" visibility="private"/>
+        <Field name="arregloProductos" type="List&lt;Producto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCliente" returnType="String" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="String" name="cliente"/>
+        </Method>
+        <Method name="getNumeroPedido" returnType="String" visibility="public"/>
+        <Method name="setNumeroPedido" returnType="void" visibility="public">
+          <Argument type="String" name="numeroPedido"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="clases" visibility="public" xPosition="557.0" yPosition="463.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="arregloProductos" source="clases.Pedido" target="clases.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Producto&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

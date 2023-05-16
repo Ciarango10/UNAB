@@ -1,0 +1,7 @@
+1;Carlos;Pérez;05/01/1989
+2;Manuel;Heredia;26/12/1973
+3;Rosa;Campos;12/06/1961
+4;David;García;25/07/2006
+5;Juan;García;20/09/2006
+6;Albeiro;García;25/08/2006
+7;Ana;García;10/01/2006
